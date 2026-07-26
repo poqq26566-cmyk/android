@@ -10,9 +10,15 @@
 		android:layout_height="24dp"
 		android:background="?attr/colorPrimary" />
 
+	<View
+		android:id="@+id/choose_cloud_service_header_spacing"
+		android:layout_width="match_parent"
+		android:layout_height="12dp"
+		android:layout_below="@id/choose_cloud_service_header_extension" />
+
 	<include
 		android:id="@+id/rv_choose_cloud_service"
 		layout="@layout/recycler_view_layout"
-		android:layout_below="@id/choose_cloud_service_header_extension" />
+		android:layout_below="@id/choose_cloud_service_header_spacing" />
 
 </RelativeLayout>
