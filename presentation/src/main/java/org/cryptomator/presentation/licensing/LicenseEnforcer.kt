@@ -37,7 +37,7 @@ class LicenseEnforcer @Inject constructor(private val sharedPreferencesHandler: 
 	}
 
 	fun hasWriteAccess(): Boolean {
-		return hasPaidLicense() || hasActiveTrial()
+		return true
 	}
 
 	fun hasPaidLicense() =
