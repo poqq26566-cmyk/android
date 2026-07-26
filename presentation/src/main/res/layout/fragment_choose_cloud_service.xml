@@ -4,8 +4,15 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
 
+	<View
+		android:id="@+id/choose_cloud_service_header_extension"
+		android:layout_width="match_parent"
+		android:layout_height="24dp"
+		android:background="?attr/colorPrimary" />
+
 	<include
 		android:id="@+id/rv_choose_cloud_service"
-		layout="@layout/recycler_view_layout" />
+		layout="@layout/recycler_view_layout"
+		android:layout_below="@id/choose_cloud_service_header_extension" />
 
 </RelativeLayout>
