@@ -27,17 +27,6 @@ class ChooseCloudServiceActivity : BaseActivity<ActivityLayoutBinding>(ActivityL
 		binding.mtToolbar.toolbar.setTitle(R.string.screen_choose_cloud_service_title)
 		binding.mtToolbar.toolbar.subtitle = chooseCloudServiceIntent.subtitle()
 		setSupportActionBar(binding.mtToolbar.toolbar)
-
-		// Extend the green header a bit further down, only on this screen. 16dp matches the
-		// natural gap above the first list item's icon (72dp row height, 40dp centered icon),
-		// so the green/white split lands exactly in the middle of that gap.
-		val extraBottomPadding = (16 * resources.displayMetrics.density).toInt()
-		binding.mtToolbar.toolbar.setPadding(
-			binding.mtToolbar.toolbar.paddingLeft,
-			binding.mtToolbar.toolbar.paddingTop,
-			binding.mtToolbar.toolbar.paddingRight,
-			binding.mtToolbar.toolbar.paddingBottom + extraBottomPadding
-		)
 	}
 
 	override fun createFragment(): Fragment = ChooseCloudServiceFragment()
