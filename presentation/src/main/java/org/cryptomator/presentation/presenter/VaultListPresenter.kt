@@ -117,13 +117,6 @@ class VaultListPresenter @Inject constructor( //
 	}
 
 	private fun launchWelcomeFlowIfNeeded(): Boolean {
-		if (!sharedPreferencesHandler.hasCompletedWelcomeFlow()) {
-			requestActivityResult(
-				ActivityResultCallbacks.welcomeFlowCompleted(),
-				Intent(context(), WelcomeActivity::class.java)
-			)
-			return true
-		}
 		return false
 	}
 
