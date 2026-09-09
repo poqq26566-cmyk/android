@@ -24,8 +24,17 @@ jobs:
       - name: Build debug APK (F-Droid flavor)
         run: ./gradlew :presentation:assembleFdroidDebug --stacktrace
 
-      - name: Upload APK
+      - name: Build debug APK (Playstore flavor, includes Google Drive)
+        run: ./gradlew :presentation:assemblePlaystoreDebug --stacktrace
+
+      - name: Upload F-Droid APK
         uses: actions/upload-artifact@v4
         with:
-          name: cryptomator-debug-apk
-          path: presentation/build/outputs/apk/**/*.apk
+          name: cryptomator-fdroid-debug-apk
+          path: presentation/build/outputs/apk/fdroid/**/*.apk
+
+      - name: Upload Playstore APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: cryptomator-playstore-debug-apk
+          path: presentation/build/outputs/apk/playstore/**/*.apk
